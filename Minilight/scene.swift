@@ -8,9 +8,6 @@
 
 import Foundation
 
-let MAX_FLOAT = Double(pow(2, 1024) - pow(2, 971))
-
-
 struct Scene {
     let skyEmission: Vector;
     let groundReflection: Vector;

@@ -34,7 +34,7 @@ struct NullSpatialIndex: SpatialIndex {
         var hitObject: Triangle?
         var hitPosition: Vector?
         
-        var nearestDistance = MAX_FLOAT
+        var nearestDistance = Double.infinity
         
         for triangle in triangles {
             if let distance = triangle.getIntersection(rayOrigin: rayOrigin, rayDirection: rayDirection) {

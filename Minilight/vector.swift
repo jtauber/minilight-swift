@@ -97,4 +97,4 @@ func ==(lhs: Vector, rhs: Vector) -> Bool {
 
 let ZERO = Vector()
 let ONE = Vector(n: 1.0)
-let MAX = Vector(n: Double(pow(2, 1024) - pow(2, 971)))
+let MAX = Vector(n: Double.infinity)
