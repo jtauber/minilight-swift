@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3D8E5A58194D26C40084E691 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E5A57194D26C40084E691 /* main.swift */; };
+		3D8E5A5F194D26F20084E691 /* vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E5A5E194D26F20084E691 /* vector.swift */; };
+		3D8E5A62194D35330084E691 /* triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E5A61194D35330084E691 /* triangle.swift */; };
+		3D8E5A64194D3E760084E691 /* camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E5A63194D3E760084E691 /* camera.swift */; };
+		3D8E5A66194D415E0084E691 /* image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E5A65194D415E0084E691 /* image.swift */; };
+		3D8E5A68194D41910084E691 /* scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E5A67194D41910084E691 /* scene.swift */; };
+		3D8E5A6A194D51490084E691 /* raytracer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E5A69194D51490084E691 /* raytracer.swift */; };
+		3D8E5A6C194D5B000084E691 /* surfacepoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E5A6B194D5B000084E691 /* surfacepoint.swift */; };
+		3D8E5A6E194DA6290084E691 /* spatialindex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E5A6D194DA6290084E691 /* spatialindex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +33,14 @@
 /* Begin PBXFileReference section */
 		3D8E5A54194D26C40084E691 /* Minilight */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Minilight; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D8E5A57194D26C40084E691 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3D8E5A5E194D26F20084E691 /* vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vector.swift; sourceTree = "<group>"; };
+		3D8E5A61194D35330084E691 /* triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = triangle.swift; sourceTree = "<group>"; };
+		3D8E5A63194D3E760084E691 /* camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = camera.swift; sourceTree = "<group>"; };
+		3D8E5A65194D415E0084E691 /* image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = image.swift; sourceTree = "<group>"; };
+		3D8E5A67194D41910084E691 /* scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scene.swift; sourceTree = "<group>"; };
+		3D8E5A69194D51490084E691 /* raytracer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = raytracer.swift; sourceTree = "<group>"; };
+		3D8E5A6B194D5B000084E691 /* surfacepoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = surfacepoint.swift; sourceTree = "<group>"; };
+		3D8E5A6D194DA6290084E691 /* spatialindex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = spatialindex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,14 @@
 			isa = PBXGroup;
 			children = (
 				3D8E5A57194D26C40084E691 /* main.swift */,
+				3D8E5A5E194D26F20084E691 /* vector.swift */,
+				3D8E5A61194D35330084E691 /* triangle.swift */,
+				3D8E5A6B194D5B000084E691 /* surfacepoint.swift */,
+				3D8E5A65194D415E0084E691 /* image.swift */,
+				3D8E5A63194D3E760084E691 /* camera.swift */,
+				3D8E5A67194D41910084E691 /* scene.swift */,
+				3D8E5A69194D51490084E691 /* raytracer.swift */,
+				3D8E5A6D194DA6290084E691 /* spatialindex.swift */,
 			);
 			path = Minilight;
 			sourceTree = "<group>";
@@ -118,7 +142,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D8E5A6C194D5B000084E691 /* surfacepoint.swift in Sources */,
+				3D8E5A64194D3E760084E691 /* camera.swift in Sources */,
+				3D8E5A5F194D26F20084E691 /* vector.swift in Sources */,
+				3D8E5A6E194DA6290084E691 /* spatialindex.swift in Sources */,
+				3D8E5A6A194D51490084E691 /* raytracer.swift in Sources */,
+				3D8E5A68194D41910084E691 /* scene.swift in Sources */,
 				3D8E5A58194D26C40084E691 /* main.swift in Sources */,
+				3D8E5A62194D35330084E691 /* triangle.swift in Sources */,
+				3D8E5A66194D415E0084E691 /* image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +174,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -183,7 +216,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -233,6 +266,7 @@
 				3D8E5A5D194D26C40084E691 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
