@@ -3,7 +3,7 @@
 //  Minilight
 //
 //  Created by James Tauber on 6/15/14.
-//  Copyright (c) 2014 James Tauber. All rights reserved.
+//  Copyright (c) 2014 James Tauber. See LICENSE.
 //
 
 import Foundation
