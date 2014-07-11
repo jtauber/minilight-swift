@@ -1,5 +1,4 @@
-minilight-swift
-===============
+# minilight-swift
 
 port of the global illumination renderer, Minilight, to Swift
 
@@ -15,4 +14,8 @@ My updated Python port: https://github.com/jtauber/minilight
 **NOTE**: this is my first attempt at Swift so I may not have done things the
 best way. Feel free to suggest improvements via pull requests.
 
-**NOTE ALSO**: I have not yet implemented the spatial index.
+## TODO
+
+* spatial index
+* input file parsing
+* get to bottom of strange two-tone-triangle bug (seen in example above)
