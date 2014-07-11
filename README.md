@@ -3,6 +3,8 @@ minilight-swift
 
 port of the global illumination renderer, Minilight, to Swift
 
+![cornell box](https://raw.githubusercontent.com/jtauber/minilight-swift/master/cornell.jpg)
+
 Original C version by Harrison Ainsworth
 http://www.hxa.name/minilight/
 
