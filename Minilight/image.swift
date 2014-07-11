@@ -21,12 +21,12 @@ struct Image {
     let width: Int
     let height: Int
     
-    var data: Vector[]
+    var data: [Vector]
     
     init(width: Int, height: Int) {
         self.width = width
         self.height = height
-        data = Vector[](count: width * height, repeatedValue: Vector())
+        data = [Vector](count: width * height, repeatedValue: Vector())
     }
     
     func addRadiance(#x: Int, y: Int, radiance: Vector) {

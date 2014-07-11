@@ -10,7 +10,7 @@ import Foundation
 
 struct Triangle: Equatable {
     
-    let vertices: Vector[]
+    let vertices: [Vector]
     let reflectivity: Vector
     let emitivity: Vector
     

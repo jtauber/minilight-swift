@@ -47,8 +47,8 @@ struct Camera {
         let raytracer = RayTracer(scene: scene)
         let aspect = Double(image.height) / Double(image.width)
         
-        for y in 0..image.height {
-            for x in 0..image.width {
+        for y in 0..<image.height {
+            for x in 0..<image.width {
                 
                 // convert x, y into sample_direction
                 

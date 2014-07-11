@@ -15,11 +15,11 @@ struct Scene {
     let skyEmission: Vector;
     let groundReflection: Vector;
     
-    let emitters: Triangle[] = []
+    let emitters: [Triangle] = []
     
     let index: SpatialIndex
     
-    init(skyEmission: Vector, groundReflection: Vector, eyePosition: Vector, triangles: Triangle[]) {
+    init(skyEmission: Vector, groundReflection: Vector, eyePosition: Vector, triangles: [Triangle]) {
         self.skyEmission = skyEmission
         self.groundReflection = groundReflection
         

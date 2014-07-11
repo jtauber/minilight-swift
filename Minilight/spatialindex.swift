@@ -22,10 +22,10 @@ protocol SpatialIndex {
 
 // this is just does a brute-force search with no indexing
 struct NullSpatialIndex: SpatialIndex {
-    let triangles: Triangle[] = []
+    let triangles: [Triangle] = []
     let deepestLevel: Int
     
-    init(eyePosition: Vector, triangles: Triangle[]) {
+    init(eyePosition: Vector, triangles: [Triangle]) {
         self.triangles = triangles
         deepestLevel = 0
     }
