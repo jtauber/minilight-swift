@@ -37,11 +37,6 @@ struct Triangle: Equatable {
         
         let pa2 = edge0.cross(edge1)
         area = sqrt(pa2.dot(pa2)) * 0.5
-        
-        println()
-        println("\(vertices[0])")
-        println("\(reflectivity)")
-        println("t=\(tangent), n=\(normal), a=\(area)")
     }
     
     func getIntersection(#rayOrigin: Vector, rayDirection: Vector) -> Double? {

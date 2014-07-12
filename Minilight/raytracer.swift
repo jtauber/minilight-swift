@@ -23,7 +23,6 @@ struct RayTracer {
 
             let reflection = nextDirection ? color * getRadiance(rayOrigin: surfacePoint.position, rayDirection: nextDirection!, lastHit: surfacePoint.triangle) : ZERO
             
-            println("\(hitObject!.vertices[0]) \(reflection) \(illumination) \(localEmission) \(color)")
             return reflection + illumination + localEmission
         } else {
             return scene.getDefaultEmission(-rayDirection)
