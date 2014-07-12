@@ -10,7 +10,7 @@ import Foundation
 
 srand48(0);
 
-let iterations = 5
+let iterations = 20
 
 let width = 100
 let height = 100
@@ -72,9 +72,6 @@ let scene = Scene(skyEmission: skyEmission, groundReflection: groundReflection, 
 
 for iteration in 1...iterations {
     camera.getFrame(scene, image:image)
-    if iteration == 1 || iteration % 10 == 0 {
-        image.generateImage(iteration)
-    }
     println("iteration: \(iteration)")
 }
 

@@ -62,7 +62,7 @@ class Image {
             }
         }
         
-        let filename = "/Users/jtauber/minilight5_\(iterations).tiff"
+        let filename = "minilight_\(iterations).tiff"
         imageRep.TIFFRepresentation.writeToFile(filename, atomically: true)
         
         println("output \(filename)")
