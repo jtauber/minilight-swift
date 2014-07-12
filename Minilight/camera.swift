@@ -22,7 +22,7 @@ struct Camera {
     init(position: Vector, direction:Vector, angle: Double) {
         self.viewPosition = position
         self.viewDirection = direction.unitize()
-        self.viewAngle = min(max(angle, MIN_ANGLE), MAX_ANGLE) * (pi / 180)
+        self.viewAngle = min(max(angle, MIN_ANGLE), MAX_ANGLE) * (M_PI / 180)
         
         if viewDirection == ZERO { viewDirection = Vector(x:0.0, y:0.0, z:1.0) }
                 

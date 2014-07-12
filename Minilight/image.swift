@@ -37,8 +37,8 @@ struct Image {
 
         var sumOfLogs = 0.0
         
-        for x in 0..width {
-            for y in 0..height {
+        for x in 0..<width {
+            for y in 0..<height {
                 var lum = (1.0 / Double(iterations)) * data[x + y * width].dot(RGB_LUMINANCE)
                 sumOfLogs += log10(max(lum, 0.0001))
             }
@@ -52,8 +52,8 @@ struct Image {
 
         let imageRep = NSBitmapImageRep(bitmapDataPlanes: nil, pixelsWide: width, pixelsHigh: height, bitsPerSample: 8, samplesPerPixel: 4, hasAlpha: true, isPlanar: false, colorSpaceName: NSDeviceRGBColorSpace, bytesPerRow: 0, bitsPerPixel: 32)
 
-        for x in 0..width {
-            for y in 0..height {
+        for x in 0..<width {
+            for y in 0..<height {
                 let r = max(0.0, min(1.0, pow(max(data[x + y * width].x * scaleFactorPerIteration, 0), GAMMA_ENCODE)))
                 let g = max(0.0, min(1.0, pow(max(data[x + y * width].y * scaleFactorPerIteration, 0), GAMMA_ENCODE)))
                 let b = max(0.0, min(1.0, pow(max(data[x + y * width].z * scaleFactorPerIteration, 0), GAMMA_ENCODE)))

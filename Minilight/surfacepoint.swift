@@ -27,7 +27,7 @@ struct SurfacePoint {
         let inDot = inDirection.dot(triangle.normal)
         let outDot = outDirection.dot(triangle.normal)
         
-        return ((inDot < 0.0) ^ (outDot < 0.0)) ? ZERO : inRadiance * triangle.reflectivity * (abs(inDot) / pi)
+        return ((inDot < 0.0) ^ (outDot < 0.0)) ? ZERO : inRadiance * triangle.reflectivity * (abs(inDot) / M_PI)
     }
     
     func getNextDirection(inDirection: Vector) -> (Vector?, Vector) {
@@ -36,7 +36,7 @@ struct SurfacePoint {
         
         if drand48() < reflectivityMean {
             let color = triangle.reflectivity * (1.0 / reflectivityMean)
-            let _2pr1 = pi * 2.0 * drand48()
+            let _2pr1 = M_PI * 2.0 * drand48()
             let sr2 = sqrt(drand48())
             
             let x = (cos(_2pr1) * sr2)
