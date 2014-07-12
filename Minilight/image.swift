@@ -17,7 +17,7 @@ let SCALEFACTOR_NUMERATOR = 1.219 + pow((DISPLAY_LUMINANCE_MAX * 0.25), 0.4)
 let GAMMA_ENCODE = 0.45
 
 
-struct Image {
+class Image {
     let width: Int
     let height: Int
     
