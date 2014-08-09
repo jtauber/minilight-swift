@@ -15,13 +15,13 @@ struct RayTracer {
 
         let (hitObject, hitPosition) = scene.getIntersection(rayOrigin: rayOrigin, rayDirection: rayDirection, lastHit: lastHit)
         
-        if hitObject {
+        if hitObject != nil {
             let surfacePoint = SurfacePoint(triangle: hitObject!, position: hitPosition!)
-            let localEmission = lastHit ? ZERO : surfacePoint.getEmission(rayOrigin, outDirection: -rayDirection, isSolidAngle: false)
+            let localEmission = (lastHit != nil) ? ZERO : surfacePoint.getEmission(rayOrigin, outDirection: -rayDirection, isSolidAngle: false)
             let illumination = sampleEmitters(rayDirection: rayDirection, surfacePoint: surfacePoint)
             let (nextDirection, color) = surfacePoint.getNextDirection(-rayDirection)
 
-            let reflection = nextDirection ? color * getRadiance(rayOrigin: surfacePoint.position, rayDirection: nextDirection!, lastHit: surfacePoint.triangle) : ZERO
+            let reflection = (nextDirection != nil) ? color * getRadiance(rayOrigin: surfacePoint.position, rayDirection: nextDirection!, lastHit: surfacePoint.triangle) : ZERO
             
             return reflection + illumination + localEmission
         } else {
@@ -33,12 +33,12 @@ struct RayTracer {
         
         let (emitterPosition, emitter) = self.scene.getEmitter()
 
-        if emitter {
+        if (emitter != nil) {
             let emitDirection = (emitterPosition - surfacePoint.position).unitize()
             let (hitObject, hitPosition) = scene.getIntersection(rayOrigin: surfacePoint.position, rayDirection: emitDirection, lastHit: surfacePoint.triangle)
             
             var emissionIn: Vector = ZERO
-            if !(hitObject && (emitter != hitObject!)) {
+            if !((hitObject != nil) && (emitter != hitObject!)) {
                 emissionIn = SurfacePoint(triangle: emitter!, position: emitterPosition).getEmission(surfacePoint.position, outDirection: -emitDirection, isSolidAngle: true)
             }
             

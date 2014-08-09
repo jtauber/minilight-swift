@@ -76,7 +76,7 @@ func -(lhs: Vector, rhs: Vector) -> Vector {
     return Vector(x: lhs.x - rhs.x, y: lhs.y - rhs.y, z: lhs.z - rhs.z)
 }
 
-@prefix func -(v: Vector) -> Vector {
+prefix func -(v: Vector) -> Vector {
     return Vector(x: -v.x, y: -v.y, z: -v.z)
 }
 
