@@ -57,8 +57,9 @@ class Image {
                 let r = max(0.0, min(1.0, pow(max(data[x + y * width].x * scaleFactorPerIteration, 0), GAMMA_ENCODE)))
                 let g = max(0.0, min(1.0, pow(max(data[x + y * width].y * scaleFactorPerIteration, 0), GAMMA_ENCODE)))
                 let b = max(0.0, min(1.0, pow(max(data[x + y * width].z * scaleFactorPerIteration, 0), GAMMA_ENCODE)))
-                
-                imageRep.setColor(NSColor(deviceRed: r, green: g, blue: b, alpha: 1.0), atX: x, y: height - y)
+                let color = NSColor(deviceRed: CGFloat(r), green: CGFloat(g), blue: CGFloat(b), alpha: 1.0)
+
+                imageRep.setColor(color, atX: x, y: height - y)
             }
         }
         
